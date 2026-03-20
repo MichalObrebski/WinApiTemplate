@@ -1,0 +1,16 @@
+#include "resource.h"
+
+
+
+ID_MAINMENU MENU
+{
+    POPUP "&Game"
+    {
+        MENUITEM "&New Game\tCtrl+N", ID_NEWGAME
+    }
+}
+
+ID_SHORTCUTS ACCELERATORS
+{
+    "N", ID_NEWGAME, VIRTKEY, CONTROL
+}

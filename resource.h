@@ -1,0 +1,4 @@
+#define ID_APPICON 101
+#define ID_MAINMENU 102
+#define ID_NEWGAME 103
+#define ID_SHORTCUTS 104
