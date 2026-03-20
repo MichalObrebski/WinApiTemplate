@@ -34,26 +34,26 @@ HWND app::create_window(DWORD style, HWND parent, DWORD ex_style){
         L"Template",
         style,
         CW_USEDEFAULT, 0, /*default position*/
-        size.right - size.left, size.bottom - size.top, /*default size*/
+        CW_USEDEFAULT, 0, /*default size*/
         parent,
         nullptr,
         m_instance,
         this
     );
-    for (auto &f : m_board.fields())
-        f.window = CreateWindowExW(
-            0,
-            f.class_name,
-            f.window_name,
-            f.style,
-            f.position.left, f.position.top,
-            f.position.right - f.position.left,
-            f.position.bottom - f.position.top,
-            window,
-            f.menu,
-            m_instance,
-            nullptr
-        );
+    // for (auto &f : m_board.fields())
+    //     f.window = CreateWindowExW(
+    //         0,
+    //         f.class_name,
+    //         f.window_name,
+    //         f.style,
+    //         f.position.left, f.position.top,
+    //         f.position.right - f.position.left,
+    //         f.position.bottom - f.position.top,
+    //         window,
+    //         f.menu,
+    //         m_instance,
+    //         nullptr
+    //     );
     return window;
 }
 LRESULT app::window_proc_static(HWND window, UINT message, WPARAM wparam, LPARAM lparam){
